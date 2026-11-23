@@ -34,13 +34,12 @@ export const LiquidityNoticeModal = () => {
     setOpen(false);
   };
 
-  const locale = i18n.locale === 'en' ? 'en-GB' : i18n.locale;
-  const day = NO_LIQUIDATIONS_UNTIL.toLocaleDateString(locale, {
+  const day = i18n.date(NO_LIQUIDATIONS_UNTIL, {
     day: 'numeric',
-    month: 'short',
+    month: 'long',
     timeZone: TIME_ZONE,
   });
-  const time = NO_LIQUIDATIONS_UNTIL.toLocaleTimeString(locale, {
+  const time = i18n.date(NO_LIQUIDATIONS_UNTIL, {
     hour: '2-digit',
     minute: '2-digit',
     timeZone: TIME_ZONE,
