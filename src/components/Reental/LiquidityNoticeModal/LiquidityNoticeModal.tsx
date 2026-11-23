@@ -55,18 +55,12 @@ export const LiquidityNoticeModal = () => {
           <ShieldCheckIcon />
         </SvgIcon>
         <Typography variant="h2" sx={{ mb: 4 }}>
-          <Trans>Your RNTLend balance is 100% backed</Trans>
-        </Typography>
-        <Typography variant="description" sx={{ mb: 3 }}>
-          <Trans>
-            Reental has covered, with its own funds, the amount affected by the November 18
-            incident.
-          </Trans>
+          <Trans>RNTLend is 100% back.</Trans>
         </Typography>
         <Typography variant="description" sx={{ mb: 6 }}>
           <Trans>
-            There will be no liquidations until {day} at {time}, so you can review and adjust your
-            positions with peace of mind.
+            If your position is close to its liquidation threshold, you can repay or add collateral
+            before we resume liquidations on {day}, {time}.
           </Trans>
         </Typography>
         {!canClose && (
