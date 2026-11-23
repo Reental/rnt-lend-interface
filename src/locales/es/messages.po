@@ -932,6 +932,10 @@ msgstr "Conecta tu cartera para poder hacer bridge de tus tokens."
 msgid "Show"
 msgstr "Mostrar"
 
+#: src/components/Reental/LiquidityNoticeModal/LiquidityNoticeModal.tsx
+msgid "RNTLend is 100% back."
+msgstr "RNTLend vuelve a estar operativo al 100 %."
+
 #: src/components/transactions/LiquidityMandate/LiquidityMandateModalContent.tsx
 msgid "Selected assets only"
 msgstr "Solo activos seleccionados"
@@ -1913,6 +1917,10 @@ msgstr "{0} todavía no puede respaldar liquidaciones. El router repaga la deuda
 msgid "up to 50%"
 msgstr "hasta el 50%"
 
+#: src/components/Reental/LiquidityNoticeModal/LiquidityNoticeModal.tsx
+msgid "If your position is close to its liquidation threshold, you can repay or add collateral before we resume liquidations on {day}, {time}."
+msgstr "Si tu posición está cerca de su umbral de liquidación, puedes repagar o añadir colateral antes de que reanudemos las liquidaciones el {day}, a las {time}."
+
 #: src/components/transactions/Repay/CollateralRepayModalContent.tsx
 msgid "Maximum collateral amount to use"
 msgstr "Cantidad máxima de garantía a usar"
@@ -2277,10 +2285,6 @@ msgstr "usando {backstopPositionsUsed} posiciones de respaldo"
 #: src/modules/bridge/BridgeTransactionListItem.tsx
 msgid "View TX"
 msgstr "Ver TX"
-
-#: src/components/Reental/LiquidityNoticeModal/LiquidityNoticeModal.tsx
-msgid "There will be no liquidations until {day} at {time}, so you can review and adjust your positions with peace of mind."
-msgstr "Hasta el {day} a las {time} no habrá liquidaciones, para que puedas revisar y ajustar tus posiciones con tranquilidad."
 
 #: src/modules/staking/GetABPTokenModal.tsx
 msgid "The Aave Balancer Pool Token (ABPT) is a liquidity pool token. You can receive ABPT by depositing a combination of AAVE + wstETH in the Balancer liquidity pool. You can then stake your BPT in the Safety Module to secure the protocol and earn Safety Incentives."
@@ -2953,10 +2957,6 @@ msgstr "Gobierno de Aave"
 msgid "Execute"
 msgstr "Ejecutar"
 
-#: src/components/Reental/LiquidityNoticeModal/LiquidityNoticeModal.tsx
-msgid "Your RNTLend balance is 100% backed"
-msgstr "Tu saldo en RNTLend está respaldado al 100 %"
-
 #: src/modules/governance/proposal/ProposalOverview.tsx
 msgid "Raw-Ipfs"
 msgstr "Raw-Ipfs"
@@ -3198,10 +3198,6 @@ msgstr "No puedes retirar esta cantidad porque causará una liquidación"
 #: src/components/infoTooltips/AvailableTooltip.tsx
 msgid "This is the total amount available for you to borrow. You can borrow based on your collateral and until the borrow cap is reached."
 msgstr "Esta es la cantidad total disponible que puedes tomar prestada. Puedes tomar prestado basado en tu garantía y hasta que el límite de préstamo se alcance."
-
-#: src/components/Reental/LiquidityNoticeModal/LiquidityNoticeModal.tsx
-msgid "Reental has covered, with its own funds, the amount affected by the November 18 incident."
-msgstr "Reental ha asumido con sus propios fondos el importe afectado por el incidente del 18 de noviembre."
 
 #: src/modules/governance/VotingPowerInfoPanel.tsx
 msgid "Your voting power is based on your AAVE/stkAAVE balance and received delegations."

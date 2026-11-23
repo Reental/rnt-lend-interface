@@ -8,7 +8,7 @@ import { BasicModal } from 'src/components/primitives/BasicModal';
 const LOCK_SECONDS = 10;
 const NO_LIQUIDATIONS_UNTIL = new Date('2026-11-28T18:00:00+01:00');
 const TIME_ZONE = 'Europe/Madrid';
-const SEEN_STORAGE_KEY = 'reental_lend_incident_notice_v1';
+const SEEN_STORAGE_KEY = 'reental_lend_incident_notice_v2';
 
 const fill = keyframes`
   from { transform: translateX(-100%); }
@@ -34,12 +34,13 @@ export const LiquidityNoticeModal = () => {
     setOpen(false);
   };
 
-  const day = i18n.date(NO_LIQUIDATIONS_UNTIL, {
+  const locale = i18n.locale === 'en' ? 'en-GB' : i18n.locale;
+  const day = NO_LIQUIDATIONS_UNTIL.toLocaleDateString(locale, {
     day: 'numeric',
-    month: 'long',
+    month: 'short',
     timeZone: TIME_ZONE,
   });
-  const time = i18n.date(NO_LIQUIDATIONS_UNTIL, {
+  const time = NO_LIQUIDATIONS_UNTIL.toLocaleTimeString(locale, {
     hour: '2-digit',
     minute: '2-digit',
     timeZone: TIME_ZONE,
@@ -55,18 +56,12 @@ export const LiquidityNoticeModal = () => {
           <ShieldCheckIcon />
         </SvgIcon>
         <Typography variant="h2" sx={{ mb: 4 }}>
-          <Trans>Your RNTLend balance is 100% backed</Trans>
-        </Typography>
-        <Typography variant="description" sx={{ mb: 3 }}>
-          <Trans>
-            Reental has covered, with its own funds, the amount affected by the November 18
-            incident.
-          </Trans>
+          <Trans>RNTLend is 100% back.</Trans>
         </Typography>
         <Typography variant="description" sx={{ mb: 6 }}>
           <Trans>
-            There will be no liquidations until {day} at {time}, so you can review and adjust your
-            positions with peace of mind.
+            If your position is close to its liquidation threshold, you can repay or add collateral
+            before we resume liquidations on {day}, {time}.
           </Trans>
         </Typography>
         {!canClose && (
